@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Cuaca </title>
+    </head>
+<body>
+
+    <div class="weather-container">
+        <h2>Informasi Cuaca</h2>
+        <div class="input-section">
+            <label for="lokasiInput">Lokasi:</label>
+            <input type="text" id="lokasiInput" placeholder="Masukkan nama kota...">
+            <button id="getButton">GET</button>
+        </div>
+
+        <hr>
+
+        <div id="tampilan">
+            <div class="data-item">
+                <span class="data-label">Suhu Celcius</span>
+                <span class="data-value" id="suhu-c">...</span>
+            </div>
+            <div class="data-item">
+                <span class="data-label">Suhu Fahrenheit</span>
+                <span class="data-value" id="suhu-f">...</span>
+            </div>
+            <div class="data-item">
+                <span class="data-label">Kelembapan</span>
+                <span class="data-value" id="kelembapan">...</span>
+            </div>
+            
+            <div class="category-title">Detail Lokasi</div>
+            <div class="data-item">
+                <span class="data-label">Negara</span>
+                <span class="data-value" id="negara">...</span>
+            </div>
+            <div class="data-item">
+                <span class="data-label">Provinsi</span>
+                <span class="data-value" id="provinsi">...</span>
+            </div>
+            <div class="data-item">
+                <span class="data-label">Kota/Kecamatan</span>
+                <span class="data-value" id="kecamatan">...</span>
+            </div>
+            
+            <div class="category-title">Koordinat</div>
+            <div class="data-item">
+                <span class="data-label">Longitude</span>
+                <span class="data-value" id="longitude">...</span>
+            </div>
+            <div class="data-item">
+                <span class="data-label">Latitude</span>
+                <span class="data-value" id="latitut">...</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

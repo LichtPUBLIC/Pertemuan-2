@@ -205,6 +205,14 @@
                 },
             });
         }
+        $('#getButton').on('click', function() {
+            const lokasiInput = $('#lokasiInput').val().trim();
+            if (lokasiInput) {
+                getWeather(lokasiInput);
+            } else {
+                alert("Silakan masukkan nama lokasi.");
+            }
+        });
 
 
 </body>

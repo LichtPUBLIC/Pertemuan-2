@@ -169,6 +169,43 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        function getWeather(lokasi) {
+            const apiKey = "b7743350355a4ba996b65650250710"; 
+            const urlApi = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lokasi}&aqi=no`;
+
+            $('.data-value').text('...');
+
+            $.ajax({
+                url: urlApi,
+                method: "GET",
+                success: function(data) {
+                    console.log(data);
+
+                    $('#suhu-c').text(data.current.temp_c + ' °C');
+                    $('#suhu-f').text(data.current.temp_f + ' °F');
+                    $('#kelembapan').text(data.current.humidity + ' %');
+                    
+                    $('#negara').text(data.location.country);
+                    $('#provinsi').text(data.location.region);
+                    $('#kecamatan').text(data.location.name);
+
+                    $('#longitude').text(data.location.lon);
+                    $('#latitut').text(data.location.lat);
+                    
+                    $('#lokasiInput').attr('placeholder', data.location.name);
+                    $('#lokasiInput').val('');
+                },
+                error: function(error) {
+                    console.log(error);
+                    alert("Lokasi tidak ditemukan atau terjadi kesalahan. Silakan coba lagi.");
+                    $('.data-value').text('N/A');
+                },
+            });
+        }
+
 
 </body>
 </html>

@@ -116,8 +116,7 @@
              margin-top: 10px;
         }
     </style>
-
-    </head>
+</head>
 <body>
 
     <div class="weather-container">
@@ -169,6 +168,7 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
@@ -205,6 +205,7 @@
                 },
             });
         }
+
         $('#getButton').on('click', function() {
             const lokasiInput = $('#lokasiInput').val().trim();
             if (lokasiInput) {
@@ -213,10 +214,10 @@
                 alert("Silakan masukkan nama lokasi.");
             }
         });
+
         $(document).ready(function() {
             getWeather('Yogyakarta');
         });
-
-
+    </script>
 </body>
 </html>
